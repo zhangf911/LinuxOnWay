@@ -6,9 +6,27 @@
  */
 #include "DataTime.h"
 
-unsigned int DataTime::CurrentTime()
+time_t DataTime::CurrentTime()
 {
 
+	return 0;
 }
+
+time_t DataTime::ToInt(const string& INdataTimeString)
+{
+	return 0;
+}
+
+string DataTime::ToString(time_t INtime)
+{
+	return "";
+}
+
+unsigned int DataTime::DayDiff(time_t INtime1, time_t INtime2)
+{
+	return 0;
+}
+
+
 
 

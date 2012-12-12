@@ -8,6 +8,7 @@
 #ifndef DATATIME_H_
 #define DATATIME_H_
 
+#include "Common.h"
 
 class DataTime
 {
@@ -17,9 +18,13 @@ public:
 	~DataTime();
 
 public:
-	static unsigned int CurrentTime();
+	static time_t CurrentTime();
 
+	static time_t ToInt(const string& INdataTimeString);
 
+	static string ToString(time_t INtime);
+
+	static unsigned int DayDiff(time_t INtime1, time_t INtime2);
 };
 
 #endif /* DATATIME_H_ */
