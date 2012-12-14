@@ -8,31 +8,28 @@
 #ifndef FILESYSTEM_H_
 #define FILESYSTEM_H_
 
-#include<string>
-using std::string;
+#include "Common.h"
 
-#include<vector>
-using std::vector;
-
-#include<list>
-using std::list;
-
-struct FileData
+namespace LOW
 {
-	// 文件名
-	string fileName;
-};
+	struct FileData
+	{
+		// 文件名
+		string fileName;
+	};
 
-typedef vector<FileData> FileVector;
-typedef list<FileData> FileList;
+	typedef vector<FileData> FileVector;
+	typedef list<FileData> FileList;
 
-class FileSystem
-{
-public:
-	static void GetCurrentPathFileList(FileList& OUTfileList);
+	class FileSystem
+	{
+	public:
+		static void GetCurrentPathFileList(FileList& OUTfileList);
 
 
-};
+	};
+}
+
 
 
 #endif /* FILESYSTEM_H_ */

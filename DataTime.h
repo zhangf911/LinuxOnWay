@@ -10,21 +10,25 @@
 
 #include "Common.h"
 
-class DataTime
+namespace LOW
 {
-public:
-	DataTime();
+	class DataTime
+	{
+	public:
+		DataTime();
 
-	~DataTime();
+		~DataTime();
 
-public:
-	static time_t CurrentTime();
+	public:
+		static time_t CurrentTime();
 
-	static time_t ToInt(const string& INdataTimeString);
+		static time_t ToInt(const string& INdataTimeString);
 
-	static string ToString(time_t INtime);
+		static string ToString(time_t INtime);
 
-	static unsigned int DayDiff(time_t INtime1, time_t INtime2);
-};
+		static unsigned int DayDiff(time_t INtime1, time_t INtime2);
+	};
+}
+
 
 #endif /* DATATIME_H_ */

@@ -3,26 +3,30 @@
 #include<dirent.h>
 #include<iostream>
 
-void FileSystem::GetCurrentPathFileList(FileList& OUTfileList)
+namespace LOW
 {
-	char curPath[260] = "\0";
-	if(getcwd(curPath, 260) == NULL)
+	void FileSystem::GetCurrentPathFileList(FileList& OUTfileList)
 	{
-		return;
-	}
-	DIR* pDir = opendir(curPath);
-	if(pDir == NULL)
-	{
-		return;
-	}
-	struct dirent* dirp;
-	while((dirp = readdir(pDir)) != NULL)
-	{
-		FileData data;
-		data.fileName = dirp->d_name;
-		OUTfileList.push_back(data);
+		char curPath[260] = "\0";
+		if(getcwd(curPath, 260) == NULL)
+		{
+			return;
+		}
+		DIR* pDir = opendir(curPath);
+		if(pDir == NULL)
+		{
+			return;
+		}
+		struct dirent* dirp;
+		while((dirp = readdir(pDir)) != NULL)
+		{
+			FileData data;
+			data.fileName = dirp->d_name;
+			OUTfileList.push_back(data);
 
-		std::cout << "\t" << data.fileName;
+			std::cout << "\t" << data.fileName;
+		}
+		std::cout << std::endl;
 	}
-	std::cout << std::endl;
 }
+
