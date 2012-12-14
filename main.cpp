@@ -13,10 +13,10 @@ using std::endl;
 
 int main(int argc, char* argv[])
 {
-	FileList curPathFileList;
-	FileSystem::GetCurrentPathFileList(curPathFileList);
+	LOW::FileList curPathFileList;
+	LOW::FileSystem::GetCurrentPathFileList(curPathFileList);
 
-	for(FileList::iterator it = curPathFileList.begin(); it != curPathFileList.end(); ++it)
+	for(LOW::FileList::iterator it = curPathFileList.begin(); it != curPathFileList.end(); ++it)
 	{
 		cout << it->fileName << endl;
 	}

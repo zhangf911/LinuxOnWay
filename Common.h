@@ -22,6 +22,17 @@ using std::vector;
 #include <list>
 using std::list;
 
+typedef char Int8;
+typedef unsigned char UInt8;
+typedef short Int16;
+typedef unsigned short UInt16;
+typedef int Int32;
+typedef unsigned int UInt32;
+typedef long Long;
+typedef unsigned long ULong;
+typedef long long Int64;
+typedef unsigned long long UInt64;
 
+//#define __GNUC__
 
 #endif /* COMMON_H_ */

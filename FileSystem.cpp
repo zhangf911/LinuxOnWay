@@ -28,5 +28,29 @@ namespace LOW
 		}
 		std::cout << std::endl;
 	}
+
+	void FileSystem::GetCurrentWorkingDir(char** OUTpath)
+	{
+
+	}
+
+	string FileSystem::GetCurrentWorkingDir()
+	{
+		string path;
+
+		return path;
+	}
+
+	void FileSystem::GetCurrentProcessName(char** OUTname)
+	{
+
+	}
+
+	string FileSystem::GetCurrentProcessName()
+	{
+		string processName;
+
+		return processName;
+	}
 }
 

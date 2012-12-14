@@ -24,9 +24,25 @@ namespace LOW
 	class FileSystem
 	{
 	public:
+		/**
+		 * @brief 获取当前目录下文件列表
+		 * @param OUTfileList : 文件列表
+		 * */
 		static void GetCurrentPathFileList(FileList& OUTfileList);
 
+		/**
+		 * @brief 获取当前工作目录
+		 * */
+		static void GetCurrentWorkingDir(char** OUTpath);
 
+		/**
+		 * @brief 获取当前工作目录
+		 * */
+		static string GetCurrentWorkingDir();
+
+		static void GetCurrentProcessName(char** OUTname);
+
+		static string GetCurrentProcessName();
 	};
 }
 
