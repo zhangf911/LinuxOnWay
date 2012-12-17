@@ -14,29 +14,29 @@ namespace LOW
 {
 	/**
 	* @class Cprofile
-	* @brief ÅäÖÃÎÄ¼þµÄ¶ÁÐ´
+	* @brief 配置读写
 	*/
 	class Cprofile
 	{
 	private:
-		/** ÅäÖÃÎÄ¼þÃû³Æ **/
+		/** 配置文件名 **/
 		string fileName;
 
 	public:
 
 		/**
-		* @brief Ä¬ÈÏ³õÊ¼»¯
-		* @param INfileName : ÅäÖÃÎÄ¼þÃû³Æ
+		* @brief 构造函数
+		* @param INfileName : 文件名
 		* @note
 		*/
 		Cprofile(const char* INfileName);
 
 		/**
-		* @brief ¶ÁÈ¡ÎÞ·ûºÅÕûÊý¼üÖµ
-		* @param const char* INsegName: ¶ÎÃû
-		* @param const char* INkeyName: ¼üÖµÃû
-		* @param bool* OUTvalue: ÊýÖµ
-		* @return ·µ»Øtrue±íÊ¾³É¹¦,·µ»Øfalse±íÊ¾Ê§°Ü
+		* @brief 读取bool型配置数据
+		* @param const char* INsegName: 配置段名
+		* @param const char* INkeyName: 配置键名
+		* @param bool* OUTvalue: bool型结果值
+		* @return true : 成功 false : 失败
 		* @note ¶ÁÈ¡true»òÕßfalse, Èç¹ûÊÇÊý×ÖÊ¹ÓÃÕûÊýÀàÐÍ¶ÁÈ¡,Ö»ÄÜ¶ÁÈ¡È«²¿´óÐ´»òÕßÐ¡Ð´
 		*/
 		bool ReadBOOL(const char* INsegName, const char* INkeyName, bool* OUTvalue);
