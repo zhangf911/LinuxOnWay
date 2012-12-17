@@ -33,6 +33,7 @@ typedef unsigned long ULong;
 typedef long long Int64;
 typedef unsigned long long UInt64;
 
+#include "Base.h"
 //#define __GNUC__
 
 #endif /* COMMON_H_ */
